@@ -23,7 +23,13 @@ In Claude, open **Customize > Connectors**, add a custom connector, enter the re
 
 ### Cursor
 
-Add the following to your user or project MCP configuration:
+After the Formasty plugin is approved for the Cursor Marketplace, install it from **Cursor Settings > Plugins** or run:
+
+```text
+/add-plugin formasty
+```
+
+To connect manually before marketplace approval, add the following to your user or project MCP configuration:
 
 ```json
 {

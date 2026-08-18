@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3 — Cursor Marketplace packaging
+
+- Added the official single-plugin Cursor manifest.
+- Added the hosted MCP configuration used by Cursor.
+- Added a marketplace-safe Formasty logo asset and installation instructions.
+
 ## 1.0.2 - 2026-08-18
 
 - Released the Formasty Gemini CLI extension for automatic gallery discovery.

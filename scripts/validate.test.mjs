@@ -70,6 +70,27 @@ test("Gemini CLI extension configures the hosted OAuth MCP server", async () => 
   assert.doesNotMatch(geminiContext, /"trust"\s*:\s*true/);
 });
 
+test("Cursor plugin metadata configures the hosted OAuth MCP server", async () => {
+  const plugin = JSON.parse(await readText(".cursor-plugin/plugin.json"));
+  const mcp = JSON.parse(await readText("mcp.json"));
+
+  assert.equal(plugin.name, "formasty");
+  assert.equal(plugin.displayName, "Formasty");
+  assert.equal(plugin.version, "1.0.0");
+  assert.equal(plugin.author?.name, "Formasty");
+  assert.equal(plugin.repository, "https://github.com/QuantumCoderSys/formasty-mcp");
+  assert.equal(plugin.logo, "assets/logo.png");
+  assert.equal(plugin.mcpServers, "./mcp.json");
+  assert.deepEqual(mcp, {
+    mcpServers: {
+      formasty: {
+        type: "http",
+        url: "https://app.formasty.com/api/mcp",
+      },
+    },
+  });
+});
+
 test("public documentation does not point users to the private application repository", async () => {
   const publicFiles = [
     "README.md",
@@ -80,6 +101,8 @@ test("public documentation does not point users to the private application repos
     "CHANGELOG.md",
     "GEMINI.md",
     "gemini-extension.json",
+    ".cursor-plugin/plugin.json",
+    "mcp.json",
     "llms-install.md",
     "server.json",
   ];

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "formasty": {
+      "type": "http",
+      "url": "https://app.formasty.com/api/mcp"
+    }
+  }
+}
