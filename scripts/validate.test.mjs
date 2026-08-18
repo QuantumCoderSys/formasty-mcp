@@ -36,6 +36,22 @@ test("the documented tool list matches the machine-readable operation list", asy
   assert.deepEqual(documented.sort(), [...operations].sort());
 });
 
+test("client installation guides use the canonical remote endpoint", async () => {
+  const readme = await readText("README.md");
+  const agentInstall = await readText("llms-install.md");
+
+  for (const client of ["Claude", "Cursor", "VS Code", "Cline", "ChatGPT"]) {
+    assert.match(readme, new RegExp(`### ${client}`));
+  }
+
+  assert.match(readme, /"type": "http"/);
+  assert.match(agentInstall, /"type": "streamableHttp"/);
+  assert.match(agentInstall, /"autoApprove": \[\]/);
+  assert.ok(
+    [...readme.matchAll(/https:\/\/app\.formasty\.com\/api\/mcp/g)].length >= 5,
+  );
+});
+
 test("public documentation does not point users to the private application repository", async () => {
   const publicFiles = [
     "README.md",
@@ -44,6 +60,7 @@ test("public documentation does not point users to the private application repos
     "SECURITY.md",
     "SUPPORT.md",
     "CHANGELOG.md",
+    "llms-install.md",
     "server.json",
   ];
   const contents = await Promise.all(publicFiles.map(readText));
