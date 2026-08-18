@@ -130,6 +130,7 @@ Public discovery reveals tool definitions only. Invoking tools or accessing work
 - [Formasty](https://formasty.com)
 - [Documentation](https://formasty.com/documentation)
 - [Official MCP Registry entry](https://registry.modelcontextprotocol.io/v0.1/servers?search=formasty&version=latest)
+- [Glama MCP directory](https://glama.ai/mcp/servers?query=formasty)
 - [Privacy Policy](https://formasty.com/privacy)
 - [Security](https://formasty.com/security)
 - [Terms of Service](https://formasty.com/terms)
