@@ -64,6 +64,16 @@ cline mcp install formasty --transport http https://app.formasty.com/api/mcp
 
 In a workspace with MCP app developer access, create a custom app using `https://app.formasty.com/api/mcp` as the MCP server URL, complete OAuth, and review the requested tool permissions before publishing it to the workspace.
 
+### Gemini CLI
+
+Install the official Formasty Gemini CLI extension from GitHub:
+
+```bash
+gemini extensions install https://github.com/QuantumCoderSys/formasty-mcp
+```
+
+Restart Gemini CLI, run `/mcp list`, and complete OAuth with `/mcp auth formasty` if authentication is requested. The root `gemini-extension.json` configures the hosted Streamable HTTP endpoint; no backend package or local server process is installed.
+
 ### Compatibility bridge
 
 For stdio-only clients such as older Claude Desktop versions, use the remote bridge:
@@ -85,7 +95,7 @@ For stdio-only clients such as older Claude Desktop versions, use the remote bri
 
 Never place a Formasty API key in a public repository, shared configuration, issue, or screenshot. Prefer OAuth for user-facing clients.
 
-Agents and marketplace reviewers can use [llms-install.md](llms-install.md) for the concise installation and verification path.
+Agents and marketplace reviewers can use [llms-install.md](llms-install.md) for the concise installation and verification path. Gemini CLI also receives focused operating guidance from [GEMINI.md](GEMINI.md).
 
 ## What agents can do
 

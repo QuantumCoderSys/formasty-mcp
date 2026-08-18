@@ -52,6 +52,24 @@ test("client installation guides use the canonical remote endpoint", async () =>
   );
 });
 
+test("Gemini CLI extension configures the hosted OAuth MCP server", async () => {
+  const extension = JSON.parse(await readText("gemini-extension.json"));
+  const geminiContext = await readText("GEMINI.md");
+
+  assert.equal(extension.name, "formasty-mcp");
+  assert.equal(extension.version, "1.0.0");
+  assert.equal(extension.contextFileName, "GEMINI.md");
+  assert.deepEqual(extension.mcpServers, {
+    formasty: {
+      httpUrl: "https://app.formasty.com/api/mcp",
+      description: "Formasty's official hosted MCP server with OAuth authentication.",
+      timeout: 30000,
+    },
+  });
+  assert.match(geminiContext, /Validate the draft before publishing/);
+  assert.doesNotMatch(geminiContext, /"trust"\s*:\s*true/);
+});
+
 test("public documentation does not point users to the private application repository", async () => {
   const publicFiles = [
     "README.md",
@@ -60,6 +78,8 @@ test("public documentation does not point users to the private application repos
     "SECURITY.md",
     "SUPPORT.md",
     "CHANGELOG.md",
+    "GEMINI.md",
+    "gemini-extension.json",
     "llms-install.md",
     "server.json",
   ];

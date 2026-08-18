@@ -1,0 +1,13 @@
+{
+  "name": "formasty-mcp",
+  "version": "1.0.0",
+  "description": "Build and operate Formasty forms, quizzes, surveys, and response workflows from Gemini CLI.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "formasty": {
+      "httpUrl": "https://app.formasty.com/api/mcp",
+      "description": "Formasty's official hosted MCP server with OAuth authentication.",
+      "timeout": 30000
+    }
+  }
+}
