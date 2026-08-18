@@ -1,6 +1,6 @@
 {
   "name": "formasty-mcp",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Build and operate Formasty forms, quizzes, surveys, and response workflows from Gemini CLI.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {

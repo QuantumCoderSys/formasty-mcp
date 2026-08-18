@@ -57,7 +57,7 @@ test("Gemini CLI extension configures the hosted OAuth MCP server", async () => 
   const geminiContext = await readText("GEMINI.md");
 
   assert.equal(extension.name, "formasty-mcp");
-  assert.equal(extension.version, "1.0.0");
+  assert.equal(extension.version, "1.0.2");
   assert.equal(extension.contextFileName, "GEMINI.md");
   assert.deepEqual(extension.mcpServers, {
     formasty: {

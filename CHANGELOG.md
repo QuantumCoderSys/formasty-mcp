@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 - 2026-08-18
+
+- Released the Formasty Gemini CLI extension for automatic gallery discovery.
+- Aligned the extension manifest version with the GitHub release tag.
+
 ## 1.0.1 - 2026-08-18
 
 - Added the public documentation-only repository for the hosted Formasty MCP server.
