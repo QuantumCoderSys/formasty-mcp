@@ -70,13 +70,6 @@ test("Gemini CLI extension configures the hosted OAuth MCP server", async () => 
   assert.doesNotMatch(geminiContext, /"trust"\s*:\s*true/);
 });
 
-test("Glama metadata identifies the public repository maintainer", async () => {
-  const glama = JSON.parse(await readText("glama.json"));
-
-  assert.equal(glama.$schema, "https://glama.ai/mcp/schemas/server.json");
-  assert.deepEqual(glama.maintainers, ["QuantumCoderSys"]);
-});
-
 test("public documentation does not point users to the private application repository", async () => {
   const publicFiles = [
     "README.md",
@@ -87,7 +80,6 @@ test("public documentation does not point users to the private application repos
     "CHANGELOG.md",
     "GEMINI.md",
     "gemini-extension.json",
-    "glama.json",
     "llms-install.md",
     "server.json",
   ];

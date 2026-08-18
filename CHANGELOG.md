@@ -6,7 +6,6 @@
 - Documented the complete 75-operation public contract.
 - Added MCP-specific privacy, security, and support guidance.
 - Added a native Gemini CLI extension manifest and gallery discovery metadata.
-- Added Glama maintainer-verification metadata for directory claiming and synchronization.
 - Updated official registry metadata to point to this public repository.
 
 ## 1.0.0 - 2026-08-18
