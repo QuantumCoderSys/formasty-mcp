@@ -1,7 +1,8 @@
 # Changelog
 
-## 1.0.3 — Cursor Marketplace packaging
+## 1.0.3 - 2026-11-11
 
+- Published version 1.0.3 to the official MCP Registry with a clearer, task-first description.
 - Added the official single-plugin Cursor manifest.
 - Added the hosted MCP configuration used by Cursor.
 - Added a marketplace-safe Formasty logo asset and installation instructions.

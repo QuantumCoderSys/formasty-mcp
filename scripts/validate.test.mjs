@@ -11,7 +11,7 @@ test("registry metadata describes the official hosted Formasty MCP server", asyn
   const metadata = JSON.parse(await readText("server.json"));
 
   assert.equal(metadata.name, "com.formasty/form-builder");
-  assert.equal(metadata.version, "1.0.1");
+  assert.equal(metadata.version, "1.0.3");
   assert.equal(metadata.websiteUrl, "https://formasty.com");
   assert.equal(metadata.repository?.url, "https://github.com/QuantumCoderSys/formasty-mcp");
   assert.ok(metadata.description.length > 0);

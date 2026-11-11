@@ -2,13 +2,13 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.formasty/form-builder",
   "title": "Formasty",
-  "description": "Create, edit, validate, publish, and inspect Formasty forms and quizzes over authenticated MCP.",
+  "description": "Build forms, quizzes, and surveys from your AI assistant. Create, edit, publish, and read responses.",
   "websiteUrl": "https://formasty.com",
   "repository": {
     "url": "https://github.com/QuantumCoderSys/formasty-mcp",
     "source": "github"
   },
-  "version": "1.0.1",
+  "version": "1.0.3",
   "remotes": [
     {
       "type": "streamable-http",
